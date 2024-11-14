@@ -6,12 +6,14 @@ import pandas as pd
 from starter.ml.data import process_data
 from starter.ml.model import inference
 
+import os
+
 app = FastAPI()
 
 # Load the model, encoder, and label binarizer at the start
-model_path = 'model/random_forest_model.pkl'
-encoder_path = 'model/encoder.pkl'
-lb_path = 'model/label_binarizer.pkl'
+model_path = os.path.join(os.path.dirname(__file__), 'model/random_forest_model.pkl')
+encoder_path = os.path.join(os.path.dirname(__file__), 'model/encoder.pkl')
+lb_path = os.path.join(os.path.dirname(__file__), 'model/label_binarizer.pkl')
 
 # Load model, encoder, and label binarizer
 with open(model_path, 'rb') as model_file:
