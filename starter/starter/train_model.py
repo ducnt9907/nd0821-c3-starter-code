@@ -7,7 +7,7 @@ import pickle
 from contextlib import redirect_stdout
 from ml.evaluate import evaluate_on_slices
 
-data = pd.read_csv('data/processed_census.csv')
+data = pd.read_csv("data/processed_census.csv")
 
 # Optional enhancement, use K-fold cross validation instead of a
 # train-test split.
@@ -29,24 +29,28 @@ X_train, y_train, encoder, lb = process_data(
 
 # Proces the test data with the process_data function.
 X_test, y_test, _, _ = process_data(
-    test, categorical_features=cat_features, label="salary", training=False,
-    encoder=encoder, lb=lb
+    test,
+    categorical_features=cat_features,
+    label="salary",
+    training=False,
+    encoder=encoder,
+    lb=lb,
 )
 
 # Train and save a model.
 
 model = train_model(X_train, y_train)
 
-with open('model/random_forest_model.pkl', 'wb') as model_file:
+with open("model/random_forest_model.pkl", "wb") as model_file:
     pickle.dump(model, model_file)
 
-with open('model/encoder.pkl', 'wb') as encoder_file:
+with open("model/encoder.pkl", "wb") as encoder_file:
     pickle.dump(encoder, encoder_file)
 
-with open('model/label_binarizer.pkl', 'wb') as lb_file:
+with open("model/label_binarizer.pkl", "wb") as lb_file:
     pickle.dump(lb, lb_file)
 
 # Evaluate model
 with open("slice_output.txt", "w") as f:
-        with redirect_stdout(f):
-            evaluate_on_slices(model, X_test, y_test, test, cat_features)
+    with redirect_stdout(f):
+        evaluate_on_slices(model, X_test, y_test, test, cat_features)

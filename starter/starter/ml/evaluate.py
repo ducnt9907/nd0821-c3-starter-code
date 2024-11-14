@@ -13,10 +13,10 @@ def evaluate_on_slices(model, X_test, y_test, test_data, cat_features):
     - test_data: Original test DataFrame before processing.
     - cat_features: List of categorical features to slice on.
     """
-    
+
     # Ensure test_data index matches X_test/y_test after processing
     test_data = test_data.reset_index(drop=True)
-    
+
     for feature in cat_features:
         print(f"Evaluating performance on slices of {feature}...")
 
