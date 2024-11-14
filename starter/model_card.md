@@ -20,7 +20,6 @@ The evaluation data is derived from a similar demographic dataset, which is prep
 
 ## Metrics
 - **Accuracy**: Measures the proportion of correctly classified samples.
-- **Precision, Recall, F1-Score**: Calculated for each class to evaluate performance on slices of the data.
 - **Slice-based Evaluation**: Model performance is further analyzed across slices based on categorical features (e.g., `workclass`, `education`, `race`, etc.), enabling insights into how the model performs on specific subgroups.
 
 ## Ethical Considerations
