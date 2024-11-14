@@ -9,9 +9,9 @@ from starter.ml.model import inference
 app = FastAPI()
 
 # Load the model, encoder, and label binarizer at the start
-model_path = './model/random_forest_model.pkl'
-encoder_path = './model/encoder.pkl'
-lb_path = './model/label_binarizer.pkl'
+model_path = 'model/random_forest_model.pkl'
+encoder_path = 'model/encoder.pkl'
+lb_path = 'model/label_binarizer.pkl'
 
 # Load model, encoder, and label binarizer
 with open(model_path, 'rb') as model_file:
