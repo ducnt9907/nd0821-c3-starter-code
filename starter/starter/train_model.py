@@ -4,6 +4,7 @@ from ml.data import process_data
 from sklearn.model_selection import train_test_split
 import pandas as pd
 import pickle
+from contextlib import redirect_stdout
 from ml.evaluate import evaluate_on_slices
 
 data = pd.read_csv('data/processed_census.csv')
@@ -46,4 +47,6 @@ with open('model/label_binarizer.pkl', 'wb') as lb_file:
     pickle.dump(lb, lb_file)
 
 # Evaluate model
-evaluate_on_slices(data, cat_features, label="salary")
+with open("slice_output.txt", "w") as f:
+        with redirect_stdout(f):
+            evaluate_on_slices(model, X_test, y_test, test, cat_features)
