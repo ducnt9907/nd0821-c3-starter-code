@@ -23,6 +23,7 @@ with open(encoder_path, 'rb') as encoder_file:
 with open(lb_path, 'rb') as lb_file:
     lb = pickle.load(lb_file)
 
+
 class InputData(BaseModel):
     age: int
     workclass: str
@@ -59,9 +60,11 @@ class InputData(BaseModel):
             }
         }
 
+
 @app.get("/")
 def root():
     return {"message": "Welcome to the model inference API"}
+
 
 @app.post("/predict")
 def predict(data: List[InputData]):
@@ -70,9 +73,9 @@ def predict(data: List[InputData]):
 
     # Process the input data
     X, _, _, _ = process_data(
-        input_data, 
-        categorical_features=["workclass", "education", "marital-status", "occupation", 
-                              "relationship", "race", "sex", "native-country"], 
+        input_data,
+        categorical_features=["workclass", "education", "marital-status", "occupation",
+                              "relationship", "race", "sex", "native-country"],
         label=None,
         training=False,
         encoder=encoder,

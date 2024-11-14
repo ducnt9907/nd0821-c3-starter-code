@@ -21,10 +21,10 @@ def train_model(X_train, y_train):
 
     # Initialize the RandomForestClassifier model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
-    
+
     # Train the model on the training data
     model.fit(X_train, y_train)
-    
+
     # Return the trained model
     return model
 
@@ -65,8 +65,7 @@ def inference(model, X):
     preds : np.array
         Predictions from the model.
     """
-    
-    preds = model.predict(X)
-    
-    return preds
 
+    preds = model.predict(X)
+
+    return preds
