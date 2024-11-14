@@ -1,15 +1,16 @@
-import pytest
 from fastapi.testclient import TestClient
 from app import app  # Assuming the FastAPI app is named 'app.py'
 
 # Initialize the TestClient
 client = TestClient(app)
 
+
 # Test the GET route (root)
 def test_get_root():
     response = client.get("/")
     assert response.status_code == 200
     assert response.json() == {"message": "Welcome to the model inference API"}
+
 
 # Test the POST route with a valid input
 def test_post_predict_valid():
@@ -28,13 +29,14 @@ def test_post_predict_valid():
             "capital-gain": 2174,
             "capital-loss": 0,
             "hours-per-week": 40,
-            "native-country": "United-States"
+            "native-country": "United-States",
         }
     ]
-    
+
     response = client.post("/predict", json=data)
     assert response.status_code == 200
     assert "predictions" in response.json()
+
 
 # Test the POST route with another valid input (different data for prediction)
 def test_post_predict_another_valid():
@@ -53,11 +55,10 @@ def test_post_predict_another_valid():
             "capital-gain": 5000,
             "capital-loss": 0,
             "hours-per-week": 60,
-            "native-country": "India"
+            "native-country": "India",
         }
     ]
-    
+
     response = client.post("/predict", json=data)
     assert response.status_code == 200
     assert "predictions" in response.json()
-

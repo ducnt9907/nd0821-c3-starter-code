@@ -19,7 +19,7 @@ data = [
         "capital-gain": 2174,
         "capital-loss": 0,
         "hours-per-week": 40,
-        "native-country": "United-States"
+        "native-country": "United-States",
     }
 ]
 
