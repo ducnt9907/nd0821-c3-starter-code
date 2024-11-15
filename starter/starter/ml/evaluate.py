@@ -1,6 +1,4 @@
-from sklearn.metrics import accuracy_score
-from ml.model import inference
-
+from ml.model import inference, compute_model_metrics
 
 def evaluate_on_slices(model, X_test, y_test, test_data, cat_features):
     """
@@ -33,5 +31,10 @@ def evaluate_on_slices(model, X_test, y_test, test_data, cat_features):
 
             # Run inference and calculate accuracy for the slice
             preds = inference(model, X_slice)
-            accuracy = accuracy_score(y_slice, preds)
-            print(f"Accuracy for {feature} = {value}: {accuracy:.4f}")
+            precision, recall, fbeta = compute_model_metrics(y_slice, preds)
+            print(f"precision for {feature} = {value}: {precision:.4f}")
+            print(f"recall for {feature} = {value}: {recall:.4f}")
+            print(f"fbeta for {feature} = {value}: {fbeta:.4f}")
+            print("*"*5)
+
+        print("-"*50)

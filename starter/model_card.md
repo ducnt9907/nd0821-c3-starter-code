@@ -16,10 +16,10 @@ The model is intended for exploratory data analysis or educational purposes to d
 The training data consists of a subset of data from the **U.S. Census**, covering demographic information and income categories. The categorical and numerical features include data points such as education level, occupation, race, and capital gains/losses. The labels (target variable) indicate whether the individual's income is `<=50K` or `>50K`.
 
 ## Evaluation Data
-The evaluation data is derived from a similar demographic dataset, which is preprocessed to match the training data's categorical encoding and label binarization. The test set includes diverse samples from the same feature distribution as the training data to ensure consistency in evaluation.
+The evaluation data is derived from a similar demographic dataset, preprocessed to match the training data's categorical encoding and label binarization. The dataset was split into training and test sets using an 80-20 split. This means 80% of the data was used for training, and 20% was reserved for evaluation. The test set includes diverse samples from the same feature distribution as the training data to ensure consistency in evaluation.
 
 ## Metrics
-- **Accuracy**: Measures the proportion of correctly classified samples.
+- **Precision, Recall, Fbeta**: Calculated for each class to evaluate performance on slices of the data.
 - **Slice-based Evaluation**: Model performance is further analyzed across slices based on categorical features (e.g., `workclass`, `education`, `race`, etc.), enabling insights into how the model performs on specific subgroups.
 
 ## Ethical Considerations

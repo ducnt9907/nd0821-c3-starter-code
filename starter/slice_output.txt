@@ -1,109 +1,416 @@
 Evaluating performance on slices of workclass...
-Accuracy for workclass =  State-gov: 0.8566
-Accuracy for workclass =  Private: 0.8672
-Accuracy for workclass =  ?: 0.9256
-Accuracy for workclass =  Self-emp-not-inc: 0.7878
-Accuracy for workclass =  Local-gov: 0.8153
-Accuracy for workclass =  Federal-gov: 0.8137
-Accuracy for workclass =  Self-emp-inc: 0.7788
-Accuracy for workclass =  Never-worked: 1.0000
-Accuracy for workclass =  Without-pay: 1.0000
+precision for workclass =  Private: 0.7523
+recall for workclass =  Private: 0.6278
+fbeta for workclass =  Private: 0.6844
+*****
+precision for workclass =  Self-emp-not-inc: 0.7300
+recall for workclass =  Self-emp-not-inc: 0.4966
+fbeta for workclass =  Self-emp-not-inc: 0.5911
+*****
+precision for workclass =  State-gov: 0.8387
+recall for workclass =  State-gov: 0.6842
+fbeta for workclass =  State-gov: 0.7536
+*****
+precision for workclass =  ?: 0.6667
+recall for workclass =  ?: 0.4211
+fbeta for workclass =  ?: 0.5161
+*****
+precision for workclass =  Self-emp-inc: 0.7778
+recall for workclass =  Self-emp-inc: 0.7206
+fbeta for workclass =  Self-emp-inc: 0.7481
+*****
+precision for workclass =  Local-gov: 0.7400
+recall for workclass =  Local-gov: 0.6325
+fbeta for workclass =  Local-gov: 0.6820
+*****
+precision for workclass =  Federal-gov: 0.7941
+recall for workclass =  Federal-gov: 0.6750
+fbeta for workclass =  Federal-gov: 0.7297
+*****
+precision for workclass =  Without-pay: 1.0000
+recall for workclass =  Without-pay: 1.0000
+fbeta for workclass =  Without-pay: 1.0000
+*****
+--------------------------------------------------
 Evaluating performance on slices of education...
-Accuracy for education =  HS-grad: 0.8696
-Accuracy for education =  Some-college: 0.8603
-Accuracy for education =  Assoc-voc: 0.8327
-Accuracy for education =  Assoc-acdm: 0.8263
-Accuracy for education =  Prof-school: 0.8672
-Accuracy for education =  10th: 0.9297
-Accuracy for education =  Bachelors: 0.7871
-Accuracy for education =  11th: 0.9727
-Accuracy for education =  Masters: 0.7988
-Accuracy for education =  5th-6th: 0.9351
-Accuracy for education =  9th: 0.9469
-Accuracy for education =  7th-8th: 0.9609
-Accuracy for education =  1st-4th: 0.9762
-Accuracy for education =  12th: 0.9355
-Accuracy for education =  Doctorate: 0.7073
-Accuracy for education =  Preschool: 1.0000
+precision for education =  HS-grad: 0.5900
+recall for education =  HS-grad: 0.3401
+fbeta for education =  HS-grad: 0.4314
+*****
+precision for education =  Bachelors: 0.8004
+recall for education =  Bachelors: 0.7628
+fbeta for education =  Bachelors: 0.7812
+*****
+precision for education =  Some-college: 0.6684
+recall for education =  Some-college: 0.4925
+fbeta for education =  Some-college: 0.5671
+*****
+precision for education =  10th: 0.6667
+recall for education =  10th: 0.2000
+fbeta for education =  10th: 0.3077
+*****
+precision for education =  Doctorate: 0.8889
+recall for education =  Doctorate: 0.9655
+fbeta for education =  Doctorate: 0.9256
+*****
+precision for education =  Assoc-acdm: 0.7949
+recall for education =  Assoc-acdm: 0.5439
+fbeta for education =  Assoc-acdm: 0.6458
+*****
+precision for education =  Masters: 0.8165
+recall for education =  Masters: 0.8558
+fbeta for education =  Masters: 0.8357
+*****
+precision for education =  7th-8th: 1.0000
+recall for education =  7th-8th: 0.0000
+fbeta for education =  7th-8th: 0.0000
+*****
+precision for education =  9th: 1.0000
+recall for education =  9th: 0.0000
+fbeta for education =  9th: 0.0000
+*****
+precision for education =  Assoc-voc: 0.6552
+recall for education =  Assoc-voc: 0.5758
+fbeta for education =  Assoc-voc: 0.6129
+*****
+precision for education =  12th: 0.5000
+recall for education =  12th: 0.1250
+fbeta for education =  12th: 0.2000
+*****
+precision for education =  5th-6th: 1.0000
+recall for education =  5th-6th: 0.0000
+fbeta for education =  5th-6th: 0.0000
+*****
+precision for education =  11th: 0.8750
+recall for education =  11th: 0.5000
+fbeta for education =  11th: 0.6364
+*****
+precision for education =  Prof-school: 0.8878
+recall for education =  Prof-school: 0.9775
+fbeta for education =  Prof-school: 0.9305
+*****
+precision for education =  1st-4th: 1.0000
+recall for education =  1st-4th: 0.3333
+fbeta for education =  1st-4th: 0.5000
+*****
+precision for education =  Preschool: 1.0000
+recall for education =  Preschool: 1.0000
+fbeta for education =  Preschool: 1.0000
+*****
+--------------------------------------------------
 Evaluating performance on slices of marital-status...
-Accuracy for marital-status =  Married-civ-spouse: 0.7407
-Accuracy for marital-status =  Divorced: 0.9146
-Accuracy for marital-status =  Never-married: 0.9657
-Accuracy for marital-status =  Separated: 0.9471
-Accuracy for marital-status =  Widowed: 0.9439
-Accuracy for marital-status =  Married-spouse-absent: 0.9770
-Accuracy for marital-status =  Married-AF-spouse: 0.5000
+precision for marital-status =  Divorced: 0.7750
+recall for marital-status =  Divorced: 0.3263
+fbeta for marital-status =  Divorced: 0.4593
+*****
+precision for marital-status =  Married-civ-spouse: 0.7476
+recall for marital-status =  Married-civ-spouse: 0.6679
+fbeta for marital-status =  Married-civ-spouse: 0.7055
+*****
+precision for marital-status =  Never-married: 0.9184
+recall for marital-status =  Never-married: 0.4369
+fbeta for marital-status =  Never-married: 0.5921
+*****
+precision for marital-status =  Separated: 0.9000
+recall for marital-status =  Separated: 0.4500
+fbeta for marital-status =  Separated: 0.6000
+*****
+precision for marital-status =  Widowed: 1.0000
+recall for marital-status =  Widowed: 0.2500
+fbeta for marital-status =  Widowed: 0.4000
+*****
+precision for marital-status =  Married-spouse-absent: 1.0000
+recall for marital-status =  Married-spouse-absent: 0.1667
+fbeta for marital-status =  Married-spouse-absent: 0.2857
+*****
+precision for marital-status =  Married-AF-spouse: 1.0000
+recall for marital-status =  Married-AF-spouse: 0.0000
+fbeta for marital-status =  Married-AF-spouse: 0.0000
+*****
+--------------------------------------------------
 Evaluating performance on slices of occupation...
-Accuracy for occupation =  Other-service: 0.9673
-Accuracy for occupation =  Sales: 0.8324
-Accuracy for occupation =  ?: 0.9258
-Accuracy for occupation =  Craft-repair: 0.8158
-Accuracy for occupation =  Tech-support: 0.8595
-Accuracy for occupation =  Exec-managerial: 0.7835
-Accuracy for occupation =  Prof-specialty: 0.7949
-Accuracy for occupation =  Machine-op-inspct: 0.8741
-Accuracy for occupation =  Adm-clerical: 0.9004
-Accuracy for occupation =  Handlers-cleaners: 0.9462
-Accuracy for occupation =  Transport-moving: 0.8457
-Accuracy for occupation =  Protective-serv: 0.7465
-Accuracy for occupation =  Farming-fishing: 0.8883
-Accuracy for occupation =  Priv-house-serv: 1.0000
-Accuracy for occupation =  Armed-Forces: 1.0000
+precision for occupation =  Sales: 0.7640
+recall for occupation =  Sales: 0.6150
+fbeta for occupation =  Sales: 0.6814
+*****
+precision for occupation =  Craft-repair: 0.6299
+recall for occupation =  Craft-repair: 0.4301
+fbeta for occupation =  Craft-repair: 0.5112
+*****
+precision for occupation =  Protective-serv: 0.6875
+recall for occupation =  Protective-serv: 0.5641
+fbeta for occupation =  Protective-serv: 0.6197
+*****
+precision for occupation =  Prof-specialty: 0.8223
+recall for occupation =  Prof-specialty: 0.8073
+fbeta for occupation =  Prof-specialty: 0.8147
+*****
+precision for occupation =  Adm-clerical: 0.6494
+recall for occupation =  Adm-clerical: 0.4902
+fbeta for occupation =  Adm-clerical: 0.5587
+*****
+precision for occupation =  Transport-moving: 0.6579
+recall for occupation =  Transport-moving: 0.3731
+fbeta for occupation =  Transport-moving: 0.4762
+*****
+precision for occupation =  Farming-fishing: 0.6667
+recall for occupation =  Farming-fishing: 0.2500
+fbeta for occupation =  Farming-fishing: 0.3636
+*****
+precision for occupation =  Machine-op-inspct: 0.5000
+recall for occupation =  Machine-op-inspct: 0.2115
+fbeta for occupation =  Machine-op-inspct: 0.2973
+*****
+precision for occupation =  Tech-support: 0.7556
+recall for occupation =  Tech-support: 0.6071
+fbeta for occupation =  Tech-support: 0.6733
+*****
+precision for occupation =  Exec-managerial: 0.7916
+recall for occupation =  Exec-managerial: 0.7562
+fbeta for occupation =  Exec-managerial: 0.7735
+*****
+precision for occupation =  ?: 0.6667
+recall for occupation =  ?: 0.4211
+fbeta for occupation =  ?: 0.5161
+*****
+precision for occupation =  Other-service: 0.4286
+recall for occupation =  Other-service: 0.1364
+fbeta for occupation =  Other-service: 0.2069
+*****
+precision for occupation =  Handlers-cleaners: 0.8333
+recall for occupation =  Handlers-cleaners: 0.2273
+fbeta for occupation =  Handlers-cleaners: 0.3571
+*****
+precision for occupation =  Priv-house-serv: 1.0000
+recall for occupation =  Priv-house-serv: 1.0000
+fbeta for occupation =  Priv-house-serv: 1.0000
+*****
+precision for occupation =  Armed-Forces: 1.0000
+recall for occupation =  Armed-Forces: 1.0000
+fbeta for occupation =  Armed-Forces: 1.0000
+*****
+--------------------------------------------------
 Evaluating performance on slices of relationship...
-Accuracy for relationship =  Husband: 0.7389
-Accuracy for relationship =  Not-in-family: 0.9215
-Accuracy for relationship =  Own-child: 0.9905
-Accuracy for relationship =  Unmarried: 0.9547
-Accuracy for relationship =  Wife: 0.7359
-Accuracy for relationship =  Other-relative: 0.9567
+precision for relationship =  Unmarried: 0.8824
+recall for relationship =  Unmarried: 0.3061
+fbeta for relationship =  Unmarried: 0.4545
+*****
+precision for relationship =  Husband: 0.7520
+recall for relationship =  Husband: 0.6696
+fbeta for relationship =  Husband: 0.7084
+*****
+precision for relationship =  Not-in-family: 0.8537
+recall for relationship =  Not-in-family: 0.4000
+fbeta for relationship =  Not-in-family: 0.5447
+*****
+precision for relationship =  Wife: 0.7090
+recall for relationship =  Wife: 0.6597
+fbeta for relationship =  Wife: 0.6835
+*****
+precision for relationship =  Own-child: 1.0000
+recall for relationship =  Own-child: 0.3333
+fbeta for relationship =  Own-child: 0.5000
+*****
+precision for relationship =  Other-relative: 1.0000
+recall for relationship =  Other-relative: 0.1667
+fbeta for relationship =  Other-relative: 0.2857
+*****
+--------------------------------------------------
 Evaluating performance on slices of race...
-Accuracy for race =  Amer-Indian-Eskimo: 0.9844
-Accuracy for race =  White: 0.8472
-Accuracy for race =  Black: 0.9271
-Accuracy for race =  Asian-Pac-Islander: 0.8325
-Accuracy for race =  Other: 0.8621
+precision for race =  White: 0.7624
+recall for race =  White: 0.6309
+fbeta for race =  White: 0.6904
+*****
+precision for race =  Black: 0.6923
+recall for race =  Black: 0.5357
+fbeta for race =  Black: 0.6040
+*****
+precision for race =  Asian-Pac-Islander: 0.7347
+recall for race =  Asian-Pac-Islander: 0.6102
+fbeta for race =  Asian-Pac-Islander: 0.6667
+*****
+precision for race =  Amer-Indian-Eskimo: 0.6667
+recall for race =  Amer-Indian-Eskimo: 0.4000
+fbeta for race =  Amer-Indian-Eskimo: 0.5000
+*****
+precision for race =  Other: 0.0000
+recall for race =  Other: 0.0000
+fbeta for race =  Other: 1.0000
+*****
+--------------------------------------------------
 Evaluating performance on slices of sex...
-Accuracy for sex =  Male: 0.8215
-Accuracy for sex =  Female: 0.9259
+precision for sex =  Female: 0.7333
+recall for sex =  Female: 0.5171
+fbeta for sex =  Female: 0.6065
+*****
+precision for sex =  Male: 0.7599
+recall for sex =  Male: 0.6420
+fbeta for sex =  Male: 0.6960
+*****
+--------------------------------------------------
 Evaluating performance on slices of native-country...
-Accuracy for native-country =  United-States: 0.8548
-Accuracy for native-country =  Vietnam: 0.9333
-Accuracy for native-country =  ?: 0.8034
-Accuracy for native-country =  Dominican-Republic: 0.9375
-Accuracy for native-country =  Mexico: 0.9470
-Accuracy for native-country =  Italy: 0.8667
-Accuracy for native-country =  China: 0.8889
-Accuracy for native-country =  Philippines: 0.8511
-Accuracy for native-country =  Japan: 0.9000
-Accuracy for native-country =  Haiti: 0.9286
-Accuracy for native-country =  Cuba: 0.7619
-Accuracy for native-country =  Scotland: 1.0000
-Accuracy for native-country =  Ecuador: 0.8750
-Accuracy for native-country =  El-Salvador: 1.0000
-Accuracy for native-country =  Jamaica: 0.8571
-Accuracy for native-country =  India: 0.7391
-Accuracy for native-country =  Puerto-Rico: 0.9630
-Accuracy for native-country =  England: 0.7500
-Accuracy for native-country =  South: 0.7500
-Accuracy for native-country =  Columbia: 1.0000
-Accuracy for native-country =  Germany: 0.8387
-Accuracy for native-country =  Iran: 0.5714
-Accuracy for native-country =  Canada: 0.7826
-Accuracy for native-country =  Nicaragua: 1.0000
-Accuracy for native-country =  Thailand: 1.0000
-Accuracy for native-country =  Poland: 0.6875
-Accuracy for native-country =  Hong: 1.0000
-Accuracy for native-country =  Greece: 0.7143
-Accuracy for native-country =  Taiwan: 0.8571
-Accuracy for native-country =  Yugoslavia: 0.6667
-Accuracy for native-country =  Laos: 0.8000
-Accuracy for native-country =  Trinadad&Tobago: 1.0000
-Accuracy for native-country =  Guatemala: 0.9333
-Accuracy for native-country =  Hungary: 0.6667
-Accuracy for native-country =  Portugal: 1.0000
-Accuracy for native-country =  Peru: 0.8750
-Accuracy for native-country =  Outlying-US(Guam-USVI-etc): 1.0000
-Accuracy for native-country =  Cambodia: 0.6667
-Accuracy for native-country =  France: 1.0000
-Accuracy for native-country =  Ireland: 0.7500
-Accuracy for native-country =  Honduras: 1.0000
+precision for native-country =  United-States: 0.7572
+recall for native-country =  United-States: 0.6284
+fbeta for native-country =  United-States: 0.6868
+*****
+precision for native-country =  Peru: 1.0000
+recall for native-country =  Peru: 1.0000
+fbeta for native-country =  Peru: 1.0000
+*****
+precision for native-country =  Columbia: 0.0000
+recall for native-country =  Columbia: 1.0000
+fbeta for native-country =  Columbia: 0.0000
+*****
+precision for native-country =  ?: 0.7333
+recall for native-country =  ?: 0.6471
+fbeta for native-country =  ?: 0.6875
+*****
+precision for native-country =  Ecuador: 1.0000
+recall for native-country =  Ecuador: 1.0000
+fbeta for native-country =  Ecuador: 1.0000
+*****
+precision for native-country =  Mexico: 0.7500
+recall for native-country =  Mexico: 0.2727
+fbeta for native-country =  Mexico: 0.4000
+*****
+precision for native-country =  Laos: 1.0000
+recall for native-country =  Laos: 0.0000
+fbeta for native-country =  Laos: 0.0000
+*****
+precision for native-country =  Vietnam: 1.0000
+recall for native-country =  Vietnam: 0.0000
+fbeta for native-country =  Vietnam: 0.0000
+*****
+precision for native-country =  Philippines: 0.5833
+recall for native-country =  Philippines: 0.6364
+fbeta for native-country =  Philippines: 0.6087
+*****
+precision for native-country =  India: 0.8000
+recall for native-country =  India: 0.6667
+fbeta for native-country =  India: 0.7273
+*****
+precision for native-country =  Germany: 0.7500
+recall for native-country =  Germany: 0.5455
+fbeta for native-country =  Germany: 0.6316
+*****
+precision for native-country =  Cambodia: 0.0000
+recall for native-country =  Cambodia: 0.0000
+fbeta for native-country =  Cambodia: 1.0000
+*****
+precision for native-country =  England: 0.7500
+recall for native-country =  England: 0.7500
+fbeta for native-country =  England: 0.7500
+*****
+precision for native-country =  El-Salvador: 1.0000
+recall for native-country =  El-Salvador: 1.0000
+fbeta for native-country =  El-Salvador: 1.0000
+*****
+precision for native-country =  Dominican-Republic: 1.0000
+recall for native-country =  Dominican-Republic: 0.0000
+fbeta for native-country =  Dominican-Republic: 0.0000
+*****
+precision for native-country =  Cuba: 1.0000
+recall for native-country =  Cuba: 0.4286
+fbeta for native-country =  Cuba: 0.6000
+*****
+precision for native-country =  Iran: 1.0000
+recall for native-country =  Iran: 0.5000
+fbeta for native-country =  Iran: 0.6667
+*****
+precision for native-country =  Nicaragua: 1.0000
+recall for native-country =  Nicaragua: 0.0000
+fbeta for native-country =  Nicaragua: 0.0000
+*****
+precision for native-country =  Italy: 1.0000
+recall for native-country =  Italy: 0.6667
+fbeta for native-country =  Italy: 0.8000
+*****
+precision for native-country =  Jamaica: 0.0000
+recall for native-country =  Jamaica: 0.0000
+fbeta for native-country =  Jamaica: 1.0000
+*****
+precision for native-country =  China: 0.7143
+recall for native-country =  China: 1.0000
+fbeta for native-country =  China: 0.8333
+*****
+precision for native-country =  South: 1.0000
+recall for native-country =  South: 0.5000
+fbeta for native-country =  South: 0.6667
+*****
+precision for native-country =  Outlying-US(Guam-USVI-etc): 1.0000
+recall for native-country =  Outlying-US(Guam-USVI-etc): 1.0000
+fbeta for native-country =  Outlying-US(Guam-USVI-etc): 1.0000
+*****
+precision for native-country =  Puerto-Rico: 0.5000
+recall for native-country =  Puerto-Rico: 0.5000
+fbeta for native-country =  Puerto-Rico: 0.5000
+*****
+precision for native-country =  Taiwan: 1.0000
+recall for native-country =  Taiwan: 0.7500
+fbeta for native-country =  Taiwan: 0.8571
+*****
+precision for native-country =  Canada: 0.8333
+recall for native-country =  Canada: 0.5556
+fbeta for native-country =  Canada: 0.6667
+*****
+precision for native-country =  Haiti: 1.0000
+recall for native-country =  Haiti: 0.5000
+fbeta for native-country =  Haiti: 0.6667
+*****
+precision for native-country =  Portugal: 1.0000
+recall for native-country =  Portugal: 1.0000
+fbeta for native-country =  Portugal: 1.0000
+*****
+precision for native-country =  Honduras: 1.0000
+recall for native-country =  Honduras: 1.0000
+fbeta for native-country =  Honduras: 1.0000
+*****
+precision for native-country =  Greece: 1.0000
+recall for native-country =  Greece: 1.0000
+fbeta for native-country =  Greece: 1.0000
+*****
+precision for native-country =  Trinadad&Tobago: 1.0000
+recall for native-country =  Trinadad&Tobago: 1.0000
+fbeta for native-country =  Trinadad&Tobago: 1.0000
+*****
+precision for native-country =  Ireland: 1.0000
+recall for native-country =  Ireland: 1.0000
+fbeta for native-country =  Ireland: 1.0000
+*****
+precision for native-country =  Hungary: 1.0000
+recall for native-country =  Hungary: 0.5000
+fbeta for native-country =  Hungary: 0.6667
+*****
+precision for native-country =  Poland: 1.0000
+recall for native-country =  Poland: 1.0000
+fbeta for native-country =  Poland: 1.0000
+*****
+precision for native-country =  Thailand: 1.0000
+recall for native-country =  Thailand: 0.0000
+fbeta for native-country =  Thailand: 0.0000
+*****
+precision for native-country =  Hong: 1.0000
+recall for native-country =  Hong: 1.0000
+fbeta for native-country =  Hong: 1.0000
+*****
+precision for native-country =  Yugoslavia: 1.0000
+recall for native-country =  Yugoslavia: 1.0000
+fbeta for native-country =  Yugoslavia: 1.0000
+*****
+precision for native-country =  Japan: 0.6667
+recall for native-country =  Japan: 1.0000
+fbeta for native-country =  Japan: 0.8000
+*****
+precision for native-country =  France: 1.0000
+recall for native-country =  France: 0.5000
+fbeta for native-country =  France: 0.6667
+*****
+precision for native-country =  Guatemala: 1.0000
+recall for native-country =  Guatemala: 1.0000
+fbeta for native-country =  Guatemala: 1.0000
+*****
+precision for native-country =  Scotland: 1.0000
+recall for native-country =  Scotland: 1.0000
+fbeta for native-country =  Scotland: 1.0000
+*****
+--------------------------------------------------
