@@ -13,52 +13,52 @@ def test_get_root():
 
 
 # Test the POST route with a valid input
-def test_post_predict_valid():
+def test_predict_below_50k():
     data = [
         {
-            "age": 39,
-            "workclass": "State-gov",
-            "fnlgt": 77516,
-            "education": "Bachelors",
-            "education-num": 13,
-            "marital-status": "Never-married",
-            "occupation": "Adm-clerical",
-            "relationship": "Not-in-family",
-            "race": "White",
-            "sex": "Male",
-            "capital-gain": 2174,
-            "capital-loss": 0,
-            "hours-per-week": 40,
-            "native-country": "United-States",
+            'age': 39,
+            'workclass': ' State-gov',
+            'fnlgt': 77516,
+            'education': ' Bachelors',
+            'education-num': 13,
+            'marital-status': ' Never-married',
+            'occupation': ' Adm-clerical',
+            'relationship': ' Not-in-family',
+            'race': ' White',
+            'sex': ' Male',
+            'capital-gain': 2174,
+            'capital-loss': 0,
+            'hours-per-week': 40,
+            'native-country': ' United-States',
         }
     ]
 
     response = client.post("/predict", json=data)
     assert response.status_code == 200
-    assert "predictions" in response.json()
+    assert response.json() == {"predictions": [0]}
 
 
 # Test the POST route with another valid input (different data for prediction)
-def test_post_predict_another_valid():
+def test_predict_above_50k():
     data = [
         {
-            "age": 25,
-            "workclass": "Private",
-            "fnlgt": 234567,
-            "education": "Masters",
-            "education-num": 14,
-            "marital-status": "Married-civ-spouse",
-            "occupation": "Exec-managerial",
-            "relationship": "Husband",
-            "race": "Black",
-            "sex": "Male",
-            "capital-gain": 5000,
-            "capital-loss": 0,
-            "hours-per-week": 60,
-            "native-country": "India",
+            'age': 36,
+            'workclass': 'Private',
+            'fnlgt': 128757,
+            'education': 'Bachelors',
+            'education-num': 13,
+            'marital-status': 'Married-civ-spouse',
+            'occupation': 'Other-service',
+            'relationship': 'Husband',
+            'race': 'Black',
+            'sex': 'Male',
+            'capital-gain': 7298,
+            'capital-loss': 0,
+            'hours-per-week': 36,
+            'native-country': 'United-States',
         }
     ]
 
     response = client.post("/predict", json=data)
     assert response.status_code == 200
-    assert "predictions" in response.json()
+    assert response.json() == {"predictions": [1]}
