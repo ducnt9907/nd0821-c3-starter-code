@@ -11,18 +11,18 @@ import os
 app = FastAPI()
 
 # Load the model, encoder, and label binarizer at the start
-model_path = os.path.join(os.path.dirname(__file__), 'model/random_forest_model.pkl')
-encoder_path = os.path.join(os.path.dirname(__file__), 'model/encoder.pkl')
-lb_path = os.path.join(os.path.dirname(__file__), 'model/label_binarizer.pkl')
+model_path = os.path.join(os.path.dirname(__file__), "model/random_forest_model.pkl")
+encoder_path = os.path.join(os.path.dirname(__file__), "model/encoder.pkl")
+lb_path = os.path.join(os.path.dirname(__file__), "model/label_binarizer.pkl")
 
 # Load model, encoder, and label binarizer
-with open(model_path, 'rb') as model_file:
+with open(model_path, "rb") as model_file:
     model = pickle.load(model_file)
 
-with open(encoder_path, 'rb') as encoder_file:
+with open(encoder_path, "rb") as encoder_file:
     encoder = pickle.load(encoder_file)
 
-with open(lb_path, 'rb') as lb_file:
+with open(lb_path, "rb") as lb_file:
     lb = pickle.load(lb_file)
 
 
@@ -58,7 +58,7 @@ class InputData(BaseModel):
                 "capital-gain": 2174,
                 "capital-loss": 0,
                 "hours-per-week": 40,
-                "native-country": "United-States"
+                "native-country": "United-States",
             }
         }
 
@@ -76,14 +76,29 @@ def predict(data: List[InputData]):
     # Process the input data
     X, _, _, _ = process_data(
         input_data,
-        categorical_features=["workclass", "education", "marital-status", "occupation",
-                              "relationship", "race", "sex", "native-country"],
+        categorical_features=[
+            "workclass",
+            "education",
+            "marital-status",
+            "occupation",
+            "relationship",
+            "race",
+            "sex",
+            "native-country",
+        ],
         label=None,
         training=False,
         encoder=encoder,
-        lb=lb
+        lb=lb,
     )
 
     # Make inference
     predictions = inference(model, X)
-    return {"predictions": predictions.tolist()}
+    preds = predictions.tolist()
+    for id in range(len(preds)):
+        if preds[id] == 0:
+            preds[id] = "<=50K"
+        else:
+            preds[id] = ">50K"
+
+    return {"predictions": preds}

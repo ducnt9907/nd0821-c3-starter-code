@@ -35,7 +35,7 @@ def test_predict_below_50k():
 
     response = client.post("/predict", json=data)
     assert response.status_code == 200
-    assert response.json() == {"predictions": [0]}
+    assert response.json() == {"predictions": ["<=50K"]}
 
 
 # Test the POST route with another valid input (different data for prediction)
@@ -61,4 +61,4 @@ def test_predict_above_50k():
 
     response = client.post("/predict", json=data)
     assert response.status_code == 200
-    assert response.json() == {"predictions": [1]}
+    assert response.json() == {"predictions": [">50K"]}
