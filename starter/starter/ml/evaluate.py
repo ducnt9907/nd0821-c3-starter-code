@@ -1,5 +1,6 @@
 from ml.model import inference, compute_model_metrics
 
+
 def evaluate_on_slices(model, X_test, y_test, test_data, cat_features):
     """
     Evaluate model performance on slices of the data based on categorical features.
@@ -12,14 +13,14 @@ def evaluate_on_slices(model, X_test, y_test, test_data, cat_features):
     - cat_features: List of categorical features to slice on.
     """
 
-    print("="*50)
+    print("=" * 50)
     preds = inference(model, X_test)
     precision, recall, fbeta = compute_model_metrics(y_test, preds)
     print("Overall performance on the test set:")
     print(f"Precision: {precision:.4f}")
     print(f"Recall: {recall:.4f}")
     print(f"F-beta: {fbeta:.4f}")
-    print("="*50)
+    print("=" * 50)
 
     # Ensure test_data index matches X_test/y_test after processing
     test_data = test_data.reset_index(drop=True)
@@ -44,6 +45,6 @@ def evaluate_on_slices(model, X_test, y_test, test_data, cat_features):
             print(f"precision for {feature} = {value}: {precision:.4f}")
             print(f"recall for {feature} = {value}: {recall:.4f}")
             print(f"fbeta for {feature} = {value}: {fbeta:.4f}")
-            print("*"*5)
+            print("*" * 5)
 
-        print("="*50)
+        print("=" * 50)
