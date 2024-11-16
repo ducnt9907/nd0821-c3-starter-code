@@ -1,8 +1,7 @@
 import requests
 
 # Define the live API URL
-url = "https://nd0821-c3-starter-code.onrender.com/predictions"
-# url = "http://127.0.0.1:8000/predict"
+url = "https://nd0821-c3-starter-code-ca93.onrender.com/predict"
 
 # Define a sample data payload
 data = [
